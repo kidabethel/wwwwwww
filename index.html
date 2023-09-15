@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My NotePad</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="mode">
+      <img src="/moon-icon-5-removebg-preview.png" alt="dark" id="icon" width="40px">
+    </div>
+    <div class="container">
+      
+
+     
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar">
+            
+            
+            
+          <div class="app-name">
+            <h2>World Wide Word</h2>
+          </div>
+          <div class="notes">
+            <div class="current-note">
+              <div class="c-note">
+                <div class="note-title">
+                  <h4>Sunday School</h4>
+                  <p>Memory verse for today...</p>
+                  <div class="Date-Time">
+                    <p id="Time">11:31Am</p>
+                    <p id="Date">dd/mm/yyyy</p>
+                  </div>
+                </div>
+                <div class="close-note">
+                  <ion-icon name="trash-bin-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="saved-note">
+              <div class="s-note">
+                <div class="note-title">
+                  <h4>Sunday School</h4>
+                  <p id="excerpt">Memory verse for today...</p>
+                  <div class="Date-Time">
+                    <p id="Time">11:31Am</p>
+                    <p id="Date">dd/mm/yyyy</p>
+                  </div>
+                </div>
+                <div class="close-note">
+                  <ion-icon name="trash-bin-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+         <!-- search ////////////////// -->
+         <!-- <form action="" method="get">
+          <input type="text" placeholder="Search" name="q" id="searchbar">
+          <button onclick="
+          
+          ">Search</button>
+         </form> -->
+         <div class="search-here">
+          <form action="" method="get">
+            <div class="searchbar">
+              <input type="text" name="q" id="searchbar" placeholder="search">
+            </div>
+          </form>
+         </div>
+          
+
+          <!-- search///////////////////// -->
+          </div>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()" class="dash"><ion-icon name="menu-outline"></ion-icon><span class="www">WWW</span></span>
+      
+      
+      
+          
+          
+          <div class="single-note-div">
+            <div class="single-note">
+              <div class="Snote-title">
+                <h4 id="currentNoteTitle">No Title</h4>
+              </div>
+
+              
+
+              <!-- ppppppppppppppppppppppppppppppppppp -->
+              <div class="options">
+                <!-- Text Format -->
+                <button id="bold" class="option-button format">
+                  <i class="fa-solid fa-bold"></i>
+                </button>
+                <button id="italic" class="option-button format">
+                  <i class="fa-solid fa-italic"></i>
+                </button>
+                <button id="underline" class="option-button format">
+                  <i class="fa-solid fa-underline"></i>
+                </button>
+                
+        
+                <!-- Undo/Redo -->
+                <button id="undo" class="option-button">
+                  <i class="fa-solid fa-rotate-left"></i>
+                </button>
+                <button id="redo" class="option-button">
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+        
+                <!-- Link -->
+                <button id="createLink" class="adv-option-button">
+                  <i class="fa fa-link"></i>
+                </button>
+                <button id="unlink" class="option-button">
+                  <i class="fa fa-unlink"></i>
+                </button>
+        
+                <!-- Alignment -->
+                <button id="justifyLeft" class="option-button align">
+                  <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button id="justifyCenter" class="option-button align">
+                  <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button id="justifyRight" class="option-button align">
+                  <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button id="justifyFull" class="option-button align">
+                  <i class="fa-solid fa-align-justify"></i>
+                </button>
+                <button id="indent" class="option-button spacing">
+                  <i class="fa-solid fa-indent"></i>
+                </button>
+                <button id="outdent" class="option-button spacing">
+                  <i class="fa-solid fa-outdent"></i>
+                </button>
+        
+                <!-- Headings -->
+                <select id="formatBlock" class="adv-option-button">
+                  <option value="H1">H1</option>
+                  <option value="H2">H2</option>
+                  <option value="H3">H3</option>
+                  <option value="H4">H4</option>
+                  <option value="H5">H5</option>
+                  <option value="H6">H6</option>
+                </select>
+        
+                <!-- Font -->
+                <select id="fontName" class="adv-option-button"></select>
+                <select id="fontSize" class="adv-option-button"></select>
+        
+                <!-- Color -->
+                <div class="input-wrapper">
+                  <input type="color" id="foreColor" class="adv-option-button" />
+                  <label for="foreColor">Font Color</label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="color" id="backColor" class="adv-option-button" />
+                  <label for="backColor">Highlight Color</label>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+              <!-- pppppppppppppppppppppppppppppppppp -->
+
+
+
+
+              <div class="live-note">
+                <label for="MyNotePad">Type here</label>
+                <div id="text-input" contenteditable="true"></div>
+                <!-- <textarea id="text-input" name="content" autofocus> </textarea> -->
+              </div>
+              <div class="save">
+                <button>Save</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="./search.js"></script>
+    <script src="./script.js"></script>
+    <script src="./mode.js"></script>
+    <script src="./side.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+
+      // mode
+      
+
+
+      // mode
+
+
+      const saveButton = document.querySelector(".save button");
+      saveButton.addEventListener("click", saveNote);
+      const toolbarButtons = document.querySelectorAll(".toolbar button");
+
+      // Function to save a new note
+      function saveNote() {
+        const content = document.getElementById("text-input").value;
+        const title = promptForTitleAndSave();
+
+        const currentTime = new Date();
+        const time = currentTime.toLocaleTimeString();
+        const date = currentTime.toLocaleDateString();
+
+        // Save the note to localStorage
+        const note = { title, time, date, content };
+        localStorage.setItem(title, JSON.stringify(note));
+
+        // Clear content in the textarea
+        document.getElementById("text-input").value = "";
+
+        // Add the note to sidebar immediately after saving
+        addNoteToSidebar(title, time, date, content);
+
+        // Add a click event listener to the note to display its content in the textarea
+        addClickEventToNote();
+      }
+
+      // Function to prompt the user for a title and save the note
+      function promptForTitleAndSave() {
+        let title = prompt("Enter a title for your note:", "No Title");
+
+        // Check if the user canceled the prompt or left it empty
+        if (title === null || title.trim() === "") {
+          title = "No Title"; // Set a default title if the user didn't provide one
+        }
+
+        return title;
+      }
+
+      function addNoteToSidebar(title, time, date, content) {
+        const sidebar = document.querySelector(".notes");
+
+        const savedNote = document.createElement("div");
+        savedNote.className = "saved-note";
+
+        const noteTitle = document.createElement("div");
+        noteTitle.className = "note-title";
+
+        // Split the content into words
+        const words = content.split(" ");
+        // Get the first 4 words
+        const firstThreeWords = words.slice(0, 3).join(" ");
+
+        noteTitle.innerHTML = `
+    <h4>${title}</h4>
+    <p>${firstThreeWords}...</p> <!-- Display only the first 4 words -->
+    <div class="Date-Time">
+      <p>${time}</p>
+      <p>${date}</p>
+    </div>
+  `;
+
+        const closeNote = document.createElement("div");
+        closeNote.className = "close-note";
+        closeNote.innerHTML = `
+        <ion-icon name="trash-bin-outline"></ion-icon>
+  `;
+        closeNote.addEventListener("click", () => {
+          // Handle delete note functionality
+          // You can remove the note from the sidebar and localStorage here
+          savedNote.remove();
+        });
+
+        savedNote.appendChild(noteTitle);
+        savedNote.appendChild(closeNote);
+
+        // Add the full content as a data attribute for later use
+        savedNote.setAttribute("data-full-content", content);
+
+        // Add the note to the top of the sidebar
+        sidebar.insertBefore(savedNote, sidebar.firstChild);
+
+        // Add a click event listener to the note to display its content in the textarea
+        addClickEventToNote();
+      }
+
+      function loadNotesFromLocalStorage() {
+        const sidebar = document.querySelector(".notes");
+        sidebar.innerHTML = ""; // Clear the sidebar
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const noteKey = localStorage.key(i);
+          const note = JSON.parse(localStorage.getItem(noteKey));
+          addNoteToSidebar(note.title, note.time, note.date, note.content);
+        }
+      }
+
+      function addClickEventToNote() {
+        const savedNotes = document.querySelectorAll(".saved-note");
+        savedNotes.forEach((note) => {
+          note.addEventListener("click", () => {
+            const fullContent = note.getAttribute("data-full-content");
+            const title = note.querySelector(".note-title h4").textContent;
+
+            // Set the title in the single note
+            document.getElementById("currentNoteTitle").textContent = title;
+
+            // Set the content in the textarea
+            document.getElementById("text-input").value = fullContent;
+          });
+        });
+      }
+      // Call the function to load notes when the page loads
+      loadNotesFromLocalStorage();
+
+      // // // Function to toggle the active state of a button
+      // function toggleButtonActive(button) {
+      //   button.classList.toggle("active");
+      // }
+
+      // // Add click event listeners to toolbar buttons
+      // toolbarButtons.forEach((button) => {
+      //   button.addEventListener("click", () => {
+      //     toggleButtonActive(button);
+      //     removeActiveStateExcept(button);
+      //   });
+      // });
+
+      // // Function to remove active state from all toolbar buttons except the clicked one
+      // function removeActiveStateExcept(clickedButton) {
+      //   toolbarButtons.forEach((button) => {
+      //     if (button !== clickedButton && button.classList.contains("active")) {
+      //       button.classList.remove("active");
+      //     }
+      //   });
+      // }
+
+      // function for each toolbar
+      //       function toggleBold() {
+      //         document.getElementById("content").style.fontWeight = "bold";
+      //         toggleButtonActive("bold");
+
+      // }
+
+      //       function toggleUnderline() {
+      //         document.getElementById("content").style.textDecoration = "underline";
+      //         toggleButtonActive("underline");
+
+      //       }
+
+      //       function toggleItalic() {
+      //         document.getElementById("content").style.fontStyle = "italic";
+      //         toggleButtonActive("italic");
+      //       }
+
+      //toolbar functions
+
+      function toggleBold() {
+        let content = document.getElementById("text-input");
+        let button = document.querySelector(".bold");
+
+        if (content.style.fontWeight === "bold") {
+          content.style.fontWeight = "normal";
+          button.classList.remove("active");
+        } else {
+          content.style.fontWeight = "bold";
+          button.classList.add("active");
+        }
+      }
+
+      function toggleUnderline() {
+        let content = document.getElementById("text-input");
+        let button = document.querySelector(".underline");
+
+        if (content.style.textDecoration === "underline") {
+          content.style.textDecoration = "none";
+          button.classList.remove("active");
+        } else {
+          content.style.textDecoration = "underline";
+          button.classList.add("active");
+        }
+      }
+
+      function toggleItalic() {
+        let content = document.getElementById("text-input");
+        let button = document.querySelector(".italic");
+
+        if (content.style.fontStyle === "italic") {
+          content.style.fontStyle = "normal";
+          button.classList.remove("active");
+        } else {
+          content.style.fontStyle = "italic";
+          button.classList.add("active");
+        }
+      }
+
+      function alignLeft() {
+        document.getElementById("text-input").style.textAlign = "left";
+        toggleButtonActive("align-left");
+      }
+
+      function alignCenter() {
+        document.getElementById("text-input").style.textAlign = "center";
+        toggleButtonActive("align-center");
+      }
+
+      function alignRight() {
+        document.getElementById("text-input").style.textAlign = "right";
+        toggleButtonActive("align-right");
+      }
+
+      // Add an input event listener to the search input
+      const searchInput = document.getElementById("searchbar");
+      searchInput.addEventListener("input", handleSearch);
+
+      function handleSearch() {
+        const searchKeyword = searchInput.value.toLowerCase(); // Convert search keyword to lowercase for case-insensitive search
+        const savedNotes = document.querySelectorAll(".saved-note");
+
+        savedNotes.forEach((note) => {
+          const noteTitle = note
+            .querySelector(".note-title h4")
+            .textContent.toLowerCase();
+          const noteContent = note
+            .querySelector(".note-title p")
+            .textContent.toLowerCase();
+
+          // Check if the note title or content contains the search keyword
+          if (
+            noteTitle.includes(searchKeyword) ||
+            noteContent.includes(searchKeyword)
+          ) {
+            note.style.display = "flex"; // Display notes that match
+            note.style.color = "yellow";
+          } else {
+            note.style.display = "none"; // Hide notes that don't match
+          }
+        });
+      }
+
+      // Clear the search input field when the user presses Enter (optional)
+      searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          searchInput.value = "";
+          handleSearch(); // Reset the search results
+        }
+      });
+
+     
+
+//      // JavaScript for toggling the sidebar
+// const hamburgerIcon = document.getElementById("hamburger");
+// const sidebar = document.querySelector(".sidebar");
+
+// hamburgerIcon.addEventListener("click", () => {
+//   sidebar.classList.toggle("sidebar-hidden"); // Add a class to hide the sidebar
+// });
+
+// // JavaScript for closing the sidebar when a note is clicked (if needed)
+// const savedNotes = document.querySelectorAll(".saved-note");
+// savedNotes.forEach((note) => {
+//   note.addEventListener("click", () => {
+//     sidebar.classList.add("sidebar-hidden");
+//   });
+// });
+ 
+
+
+
+    </script>
+  </body>
+</html>
